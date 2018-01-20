@@ -1,0 +1,33 @@
+<%= stylesheet_link_tag "numbers", media: "print" %>
+<h1 class="app-name">John DickerHoff Numbers</h1>
+<%= link_to 'New Number', new_number_path, class: 'btn btn-success new-number' %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Time &amp; Date</th>
+      <th>Blood Sugar</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @numbers.each do |number| %>
+      <tr>
+        <td><%= link_to number.created_at.strftime("%B %e, %Y, %r"), number %></td>
+        <td><%= link_to number.name, number %></td>
+        <td><%= link_to number.description, number %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+
+<style type="text/css">
+
+
+</style>
