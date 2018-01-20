@@ -1,5 +1,4 @@
 class Number < ApplicationRecord
-	validates :name, presence: :true
 	before_validation :uppercase_name, :uppercase_description
 
 
