@@ -6,6 +6,7 @@
     <tr>
       <th>Time &amp; Date</th>
       <th>Blood Sugar</th>
+      <th>Insulin Dose</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -15,6 +16,7 @@
       <tr>
         <td><%= link_to number.created_at.strftime("%B %e, %Y, %r"), number %></td>
         <td><%= link_to number.name, number %></td>
+        <td><%= link_to number.insulin_dose, number %></td>
         <td><%= link_to number.description, number %></td>
       </tr>
     <% end %>

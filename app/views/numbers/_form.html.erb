@@ -1,6 +1,7 @@
 <%= bootstrap_form_for(@number) do |f| %>
   <%= f.alert_message "Please fix the errors below." %>
   <%= f.text_field :name, label: "Blood Sugar Number" %>
+  <%= f.text_field :insulin_dose, label: "Insulin Dose" %>
   <%= f.text_area :description, label: "Activity or Description" %>
   <%= f.submit "Save Number" %>
 <% end %>
