@@ -15,9 +15,9 @@
     <% @numbers.each do |number| %>
       <tr>
         <td><%= link_to number.created_at.strftime("%B %e, %Y, %I:%M %P"), number %></td>
-        <td><%= link_to number.name, number %></td>
-        <td><%= link_to number.insulin_dose, number %></td>
-        <td><%= link_to number.description, number %></td>
+        <td><%= number.name %></td>
+        <td><%= number.insulin_dose %></td>
+        <td><%= number.description %></td>
       </tr>
     <% end %>
   </tbody>
