@@ -1,6 +1,6 @@
 class NumbersController < ApplicationController
   before_action :set_number, only: [:show, :edit, :update, :destroy]
-
+  http_basic_authenticate_with name: "2842", password: "2842"
   # GET /numbers
   # GET /numbers.json
   def index
