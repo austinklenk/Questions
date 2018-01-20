@@ -3,7 +3,7 @@ class NumbersController < ApplicationController
   # GET /numbers
   # GET /numbers.json
   def index
-    @numbers = Number.all
+    @numbers = Number.order('created_at ASC')
   end
 
   # GET /numbers/1
